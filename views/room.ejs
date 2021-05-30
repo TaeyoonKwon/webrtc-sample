@@ -13,12 +13,19 @@
     ></script>
     <script src="/socket.io/socket.io.js" defer></script>
     <script src="script.js" defer></script>
-    <title>Document</title>
+    <title>WebRTC 데모</title>
     <style>
+      body {
+        background-color: gainsboro;
+      }
       #video-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, 300px);
         grid-auto-rows: 300px;
+      }
+
+      #video-grid div {
+        position: relative;
       }
 
       video {
@@ -26,9 +33,55 @@
         height: 100%;
         object-fit: cover;
       }
+
+      img {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 8px;
+        z-index: 2;
+        width: 100px;
+        background: black;
+      }
+
+      #chatbox {
+        margin-top: 30px;
+        width: 500px;
+        background: white;
+      }
+
+      #chat-messages {
+        width: 100%;
+        min-height: 300px;
+      }
     </style>
   </head>
   <body>
     <div id="video-grid"></div>
+    <div id="chatbox">
+      <div id="chat-messages"></div>
+      <form
+        style="
+          width: 100%;
+          padding: 1px;
+          display: flex;
+          justify-content: flex-end;
+        "
+      >
+        <input
+          id="userName"
+          placeholder="이름"
+          type="text"
+          style="width: 100px"
+        />
+        <input
+          id="message"
+          placeholder="채팅"
+          type="text"
+          style="width: 100%"
+        />
+        <button style="width: 200px">입력</button>
+      </form>
+    </div>
   </body>
 </html>

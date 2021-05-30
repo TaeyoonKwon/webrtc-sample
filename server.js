@@ -22,6 +22,10 @@ io.on("connection", (socket) => {
     // socket.to(roomId).broadcast.emit("user-connected", userId);
     socket.broadcast.to(roomId).emit("user-connected", userId);
 
+    socket.on("chat", (userName, message) => {
+      io.emit("chat", userName, message);
+    });
+
     socket.on("disconnect", () => {
       socket.broadcast.to(roomId).emit("user-disconnected", userId);
     });
