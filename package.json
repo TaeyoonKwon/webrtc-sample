@@ -1,0 +1,29 @@
+{
+  "name": "webrtc-sample",
+  "version": "1.0.0",
+  "description": "sample express server for WebRTC",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TaeyoonKwon/webrtc-sample.git"
+  },
+  "keywords": [],
+  "author": "Taeyoon Kwon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TaeyoonKwon/webrtc-sample/issues"
+  },
+  "homepage": "https://github.com/TaeyoonKwon/webrtc-sample#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "socket.io": "^4.1.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
